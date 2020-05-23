@@ -1,0 +1,126 @@
+body {
+  background-color: #f3f3f2;
+  color: #485f63;
+}
+
+.app {
+  text-align: center;
+}
+
+.title-container {
+  background-color: #485f63c2;
+  position: relative;
+  padding: 20px 20px 25px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 50px;
+  margin: 0 35px;
+  color: #f0f0f0;
+  font-weight: lighter;
+  line-height: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 50%;
+  margin: auto;
+  align-self: center;
+}
+
+#button {
+  width: 50%;
+  margin: auto;
+  align-self: center;
+  background-color: #b8b7b5;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.gallery {
+  margin: 10px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.gallery:hover {
+  opacity: 90%;
+}
+
+img {
+  max-width: auto;
+  max-height: 300px;
+  border: 1px solid rgb(226, 226, 226);
+}
+
+.desc-title {
+  padding: 5px 15px 0 15px;
+  text-align: center;
+  color: #000;
+}
+
+.desc-year {
+  padding: 0;
+  text-align: center;
+  color: #000;
+}
+
+#back-button {
+  position: absolute;
+  left: 20px;
+  color: #f0f0f0;
+}
+
+#back-button:hover {
+  opacity: 75%;
+}
+
+.rating {
+  line-height: 3rem;
+}
+
+.container {
+  margin: 50px;
+}
+
+.plot,
+.actors,
+.director {
+  text-align: center;
+}
+
+.tag,
+.rating,
+.plot-reveal {
+  font-weight: bold;
+  color: #0b0f2b;
+}
+
+a {
+  color: #0b0f2b;
+}
+
+a:hover,
+.plot-reveal:hover {
+  color: #485f63;
+  cursor: pointer;
+}
+
+.poster-img {
+  max-width: auto;
+  max-height: 300px;
+  border: 1px solid rgb(226, 226, 226);
+  float: left;
+  margin-right: 50px;
+}
