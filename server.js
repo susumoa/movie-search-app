@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const fetch = require('node-fetch');
@@ -16,6 +17,10 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+
+app.get('/', (req, res) => {
+  res.json('Hello')
+})
 
 app.get('/movies/:title', async (req, res) => {
   const title = req.params.title;
