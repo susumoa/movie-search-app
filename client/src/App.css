@@ -15,7 +15,7 @@ body {
 }
 
 .title {
-  font-size: 50px;
+  font-size: 35px;
   margin: 0 35px;
   color: #f0f0f0;
   font-weight: lighter;
@@ -135,5 +135,11 @@ a:hover,
     margin-bottom: 25px;
   }
 
-
+  .title {
+    font-size: 50px;
+    margin: 0 35px;
+    color: #f0f0f0;
+    font-weight: lighter;
+    line-height: 50px;
+  }
 }
