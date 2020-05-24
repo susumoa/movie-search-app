@@ -1,11 +1,10 @@
 .ratings {
-  display: inline-block;
+  display: float;
 }
 
 .item {
   margin: 30px 30px auto;
   position: relative;
-  float: left;
 }
 
 .item p {
@@ -30,4 +29,15 @@ svg {
 .circle_animation {
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
+}
+
+@media (min-width: 600px) {
+  .ratings {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .item {
+    float: left;
+  }
 }
