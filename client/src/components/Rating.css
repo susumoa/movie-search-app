@@ -1,9 +1,9 @@
 .ratings {
-  display: float;
+  display: inline-block;
 }
 
 .item {
-  margin: 30px 30px auto;
+  margin: 30px auto auto;
   position: relative;
 }
 
@@ -31,13 +31,10 @@ svg {
   stroke-dashoffset: 440;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 950px) {
   .ratings {
     display: flex;
     justify-content: space-around;
   }
 
-  .item {
-    float: left;
-  }
 }
