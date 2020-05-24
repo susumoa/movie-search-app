@@ -10,6 +10,9 @@ const url = `http://www.omdbapi.com/?apikey=${apiKey}&`;
 const app = express();
 const port = process.env.PORT || 5000;
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -44,15 +47,11 @@ app.get('/movie/:id', async (req, res) => {
   }
 });
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
-    
-  // Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
