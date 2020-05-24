@@ -55,7 +55,7 @@ ul {
 }
 
 .gallery:hover {
-  opacity: 90%;
+  box-shadow: 2px 5px 43px 0px rgba(158,158,158,1);
 }
 
 img {
