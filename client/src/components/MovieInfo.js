@@ -67,21 +67,30 @@ const MovieInfo = (props) => {
             </p>
           }
 
-          <p className='actors'>
+          {Actors !== 'N/A'
+          && <p className='actors'>
             <span className='tag'>Actors:</span> {Actors}
           </p>
-          <p className='director'>
+          }
+          
+          {Director !== 'N/A'
+          && <p className='director'>
             <span className='tag'>Director:</span> {Director}
           </p>
+          }
+          
           <p>
             <span className='tag'>Released:</span> {Year}
           </p>
-          <a href={`https://www.imdb.com/title/${imdbID}`}>IMDb</a>
+          <a href={`https://www.imdb.com/title/${imdbID}`} target="_blank">IMDb</a>
 
-          <div className='ratings-container'>
-            <p className='rating'>Ratings:</p>
-            <Rating ratings={Ratings} />
-          </div>
+          {Ratings.length > 0
+            && <div className='ratings-container'>
+              <p className='rating'>Ratings:</p>
+              <Rating ratings={Ratings} />
+            </div>
+          }
+
         </div>
       </div>
     );

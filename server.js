@@ -37,7 +37,7 @@ app.get('/movies/:title', async (req, res) => {
   }
 });
 
-app.get('/movie/:id', async (req, res) => {
+app.get('/movie/data/:id', async (req, res) => {
   const id = req.params.id;
   console.log(req.params);
   const apiUrl = `${url}i=${id}&plot=full`;

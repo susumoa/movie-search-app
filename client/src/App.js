@@ -38,7 +38,7 @@ function App() {
   };
 
   const getSelectedMovie = async (id) => {
-    const apiUrl = `/movie/${id}`;
+    const apiUrl = `/movie/data/${id}`;
     try {
       const response = await fetch(apiUrl);
       const json = await response.json();
