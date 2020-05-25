@@ -30,6 +30,7 @@ function App() {
     try {
       const response = await fetch(apiUrl);
       const json = await response.json();
+      console.log('Movies:', json)
       return json;
     } catch (err) {
       console.log('Error: ', err);
@@ -41,6 +42,7 @@ function App() {
     try {
       const response = await fetch(apiUrl);
       const json = await response.json();
+      console.log('Movie:', json)
       return json;
     } catch (err) {
       console.log('Error: ', err);

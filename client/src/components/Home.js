@@ -6,8 +6,6 @@ import { Form, Button, Input, Icon } from 'semantic-ui-react';
 const Home = (props) => {
   const { handleSubmit, movieList, handleMovieSelection, handleChange, value } = props;
 
-  console.log(movieList);
-
   return (
     <div>
       <div className='title-container'>

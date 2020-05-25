@@ -49,21 +49,23 @@ const MovieInfo = (props) => {
           <h1 className='title'>{Title}</h1>
         </div>
         <div className='container'>
-          <img className='poster-img' src={Poster} alt={`${Title} poster`} />
+          <img className='poster-img' src={Poster === 'N/A' ? 'https://www.popcorn.app/assets/app/images/placeholder-movieimage.png' : Poster} alt={Poster === 'N/A' ? 'No poster available' : `${Title} poster`} id={imdbID} />
 
-          <p className='plot'>
-            <span className='tag'>Plot: </span>
-            {!showFullPlot ? (
-              <span>
-                {`${Plot.substring(0, 100)}... `}
-                <span className='plot-reveal' onClick={handleShowFullPlot}>
-                  Show more
+          {Plot !== 'N/A'
+            && <p className='plot'>
+              <span className='tag'>Plot: </span>
+              {!showFullPlot ? (
+                <span>
+                  {`${Plot.substring(0, 100)}... `}
+                  <span className='plot-reveal' onClick={handleShowFullPlot}>
+                    Show more
+                  </span>
                 </span>
-              </span>
-            ) : (
-              <FullPlot handleShowFullPlot={handleShowFullPlot} plot={Plot} />
-            )}
-          </p>
+              ) : (
+                <FullPlot handleShowFullPlot={handleShowFullPlot} plot={Plot} />
+              )}
+            </p>
+          }
 
           <p className='actors'>
             <span className='tag'>Actors:</span> {Actors}
